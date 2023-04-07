@@ -3,7 +3,8 @@ import "./App.css";
 // importamos componentes 
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
-
+import Button from "./components/Button/Button";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 // react router dom 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -14,22 +15,27 @@ import Contacto from "./pages/Contacto/Contacto";
 import Productos from "./pages/Productos/Productos";
 
 
+
 const App = () => {
 
     return (
       <Router>
         <div className="App">
-
+          
+          
           <Header title="Malcriadas" subtitle="Glitter y Accesorios" />
           <NavBar />
-         <Routes>
+          <Routes>
           <Route path = "/" element = {<Inicio />} />   
           <Route path = "/productos" element = {<Productos/>} />   
           <Route path = "/Contacto" element = {<Contacto />} />   
           
           </Routes>
+          <ItemListContainer />
+          <Button>Pedilo!</Button>
         </div>
       </Router>
+       
     );
 
   };
