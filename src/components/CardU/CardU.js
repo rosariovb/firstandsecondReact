@@ -7,6 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 
 
+
 const CardU = ({
   img,
   title,
@@ -33,6 +34,7 @@ const CardU = ({
       </CardContent>
     </CardActionArea>
   </Card>
+
   );
 };
 export default CardU;

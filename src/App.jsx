@@ -13,6 +13,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/Inicio/Inicio";
 import Contacto from "./pages/Contacto/Contacto";
 import Productos from "./pages/Productos/Productos";
+import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
+
 
 
 
@@ -28,9 +30,11 @@ const App = () => {
           <Routes>
           <Route path = "/" element = {<Inicio />} />   
           <Route path = "/productos" element = {<Productos/>} />   
-          <Route path = "/Contacto" element = {<Contacto />} />   
+          <Route path = "/Contacto" element = {<Contacto />} />
+          <Route path = "/detail/:id" element = {<ItemDetailContainer />} />  
           
           </Routes>
+         
           <ItemListContainer />
           <Button>Pedilo!</Button>
         </div>
