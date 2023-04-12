@@ -1,6 +1,7 @@
 /*import React, { Component } from "react";*/
 import "./App.css";
-// importamos componentes 
+/*import "./components/CardUser/CardUser.css";*/
+//  componentes 
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import Button from "./components/Button/Button";
@@ -13,7 +14,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/Inicio/Inicio";
 import Contacto from "./pages/Contacto/Contacto";
 import Productos from "./pages/Productos/Productos";
-import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
+import ItemDetail from "./pages/ItemDetail/ItemDetail";
 
 
 
@@ -31,11 +32,10 @@ const App = () => {
           <Route path = "/" element = {<Inicio />} />   
           <Route path = "/productos" element = {<Productos/>} />   
           <Route path = "/Contacto" element = {<Contacto />} />
-          <Route path = "/detail/:id" element = {<ItemDetailContainer />} />  
+          <Route exact path = "/detail/:id" element = {<ItemDetail />} />  
           
           </Routes>
          
-          <ItemListContainer />
           <Button>Pedilo!</Button>
         </div>
       </Router>

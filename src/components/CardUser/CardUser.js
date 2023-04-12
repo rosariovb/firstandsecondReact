@@ -4,12 +4,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import {Link} from "react-router-dom";
 
 
 
-
-const CardU = ({
+const CardUser = ({
   img,
+  id,
   title,
   description,
   price,
@@ -30,6 +31,10 @@ const CardU = ({
         <Typography variant="body2" color="text.secondary">
           {price}
         </Typography>
+        <Link to= {`/detail/${id}`}>
+        Ver detalle 
+        </Link>
+
         <div>{children}</div>
       </CardContent>
     </CardActionArea>
@@ -37,4 +42,4 @@ const CardU = ({
 
   );
 };
-export default CardU;
+export default CardUser;
