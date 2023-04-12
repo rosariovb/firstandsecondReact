@@ -17,9 +17,9 @@ const CardU = ({
   children,
 }) => {
   return (
-    <Card sx={{ maxWidth: 345, background: backgroundColor }}>
-    <CardActionArea>
-      <CardMedia  image={img} sx={{ height: 140 }} />
+    <Card  sx={{ maxWidth: 300, background: backgroundColor }}>
+    <CardActionArea> 
+      <CardMedia  image={img} sx={{ height: 180 }} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
